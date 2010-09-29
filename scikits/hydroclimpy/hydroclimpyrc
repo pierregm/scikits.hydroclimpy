@@ -1,0 +1,226 @@
+# Default configuration file
+
+# Default section : Generic options for the whole package
+# force_local
+#    Whether results/logs should be stored in the current directory (True)
+#    or in the `rootdir` directory (False)
+# verbose
+#    Verbosity level, as one of the levels recognized by the :mod:`logging`
+#    module (:const:`DEBUG`, :const:`INFO`, :const:`WARNING`, :const:`ERROR` 
+#    and :const:`CRITICAL`)
+# logfile
+#     Name of the file where to record messages.
+#     If None or empty, no messages are recorded
+# rootdir
+#      Path of the working directory where to store logs and local data.
+#      The `~` character represents the `HOME` directory.
+
+
+[DEFAULT]
+force_local : False
+verbose     : DEBUG
+logfile     : hcp.log
+rootdir     : ~/workspace/climpy_/work
+
+
+# Configuration options for the :mod:`~scikits.hydroclimpy.io.usgs` module
+# datadir
+#    Path of the directory where to store local USGS data.
+# archive
+#    Name of the ZIP archive where to store/read the local data 
+# netfile
+#    URL of the online USGS streamflow data
+# begin_date
+#    Default starting date of the data to retrieve.
+#    The ending date is the current date by default.
+# nodata.streamflows
+#    String representing a missing data in the downloaded series.
+# commentchar
+#    Character representing the beginning of a comment.
+#    All the characters on the line after this character are discarded.
+# headerlines
+#    Number of uncommented lines to skip at the beginning of a file
+
+[USGS]
+datadir             : %(rootdir)s/USGS
+archive             : %(datadir)s/USGSInfo
+netfile             : http://waterdata.usgs.gov/nwis
+begin_date          : 1880-01-01
+nodata.streamflows  : -9999
+commentchar         : '#'
+headerlines         : 2
+
+
+# Configuration section for NCDC
+
+[NCDC]
+datadir             : %(rootdir)s/NCDC/archives
+rawdatadir          : %(rootdir)s/NCDC/rawdata
+netfile.dir         : http://www1.ncdc.noaa.gov/pub/data/cirs/
+netfile.rainfall    : drd964x.pcp.txt
+netfile.temperature : drd964x.tmp.txt
+nodata.rainfall     : -9.99
+nodata.temperature  : -99.9
+
+
+# Configuration section for the :mod:`~scikits.hydroclimpy.io.coaps
+# datadir
+#    Path of the directory where to store local data
+# archive
+#    Name of the archive where to store/read local data
+# netfile.dir
+#    URL of the directory where to retrieve COAPS information
+# headerlines
+#    Number of uncommented lines to skip at the beginning of each file
+# nodata
+#    String indicating missing data in the series
+# conversion_factor
+#    Conversion factor for the precipitation from 1/100in to mm 
+
+[COAPS]
+datadir             : %(rootdir)s/COAPS
+archive             : %(datadir)s/COAPSInfo
+netfile.dir         : ftp://www.coaps.fsu.edu/pub/griffin/SECOOP/SECC_data/ascii
+headerlines         : 12
+nodata              : -99
+conversion_factor   : 0.01*25.4
+
+#
+# Configuration for the :mod:`~scikits.hydroclimpy.enso` module
+#
+# Generic configuration for the module
+# ensorootdir
+#    Path of the working directory where to store/read local data
+# ensoarchive
+#    Name of the ZIP archive where to store/read local data
+[ENSO]
+ensorootdir         : %(rootdir)s/ENSO
+ensoarchive         : %(ensorootdir)s/ENSOInfo
+#
+# Common configuration options for the different subsections
+#
+# archive
+#    Name of the zip archive where to store/read the information
+# datadir
+#    Path of the directory where to store local data
+# datafile
+#    Name of the local file storing the 5-m filtered SST anomalies from 1868 to
+#    now
+# netfile
+#    URL of the file storing the 5-m filtered SST anomalies from 1868 to now
+# scalefactor
+#    Factor to convert the data to oC
+# nodata
+#    String indicating missing data in the series
+# headerlines
+#    Number of uncommented lines to skip at the beginning of each file
+# reference_period
+#    Tuple of the starting and ending date of the reference period
+#    for the definition of the average SSTs
+# thresholds
+#    Lower and upper SSTs thresholds for the definition of ENSO conditions
+# full_year
+#    Whether the ENSO indicator should be defined for 12 consecutive months
+#    at once (True)
+# minimum_size
+#    Minimum number of consecutive months meeting an ENSO temperature condition
+#    for the definition of an ENSO episode
+# reference_season
+#     Months that must be part of the consecutive months for the definition
+#     of the ENSO condition
+# ensotag
+#     Nickname of the ENSO indicator
+
+[ENSO.JMA]
+#
+# ... as defined by COAPS
+
+[ENSO.JMA.COAPS]
+archive             : JMA_COAPS
+datadir             : %(ensorootdir)s/ENSO_JMA_COAPS
+datafile            : jmasst1868-today.filter-5
+netfile             : ftp://www.coaps.fsu.edu/pub/JMA_SST_Index/jmasst1868-today.filter-5
+scalefactor         : 0.1
+nodata              : 999
+skipline            : 0
+reference_period    : 1961,1990
+thresholds          : (-0.5, 0.5)
+full_year           : False
+minimum_size        : 6
+reference_season    : OND
+ensotag             : JMA COAPS
+#
+[ENSO.JMA.Standard]
+archive             : JMA_Standard
+datadir             : %(ensorootdir)s/ENSO_JMA_Standard
+datafile            : 5rmean
+netfile             : http://ds.data.jma.go.jp/tcc/tcc/products/elnino/index/sstindex/base_period_7100/Nino_3/5rmean
+scalefactor         : 1.
+nodata              : 99.9
+skipline            : 1
+reference_period    : 1971,2000
+thresholds          : (-0.5, 0.5)
+full_year           : False
+minimum_size        : 6
+reference_season    : NDJ
+ensotag             : JMA Standard
+#
+[ENSO.JMA.Sliding]
+archive             : JMA_Sliding
+datadir             : %(ensorootdir)s/ENSO_JMA_Sliding
+datafile            : 5rmean
+netfile             : http://ds.data.jma.go.jp/tcc/tcc/products/elnino/index/sstindex/sliding_30year_period/Nino_3/5rmean
+scalefactor         : 1.
+nodata              : 99.9
+skipline            : 1
+reference_period    : 1971,2000
+thresholds          : (-0.5, 0.5)
+full_year           : False
+minimum_size        : 6
+reference_season    : NDJ
+ensotag             : JMA 30 years sliding
+#
+[ENSO.ONI]
+archive             : ONI
+archive_backup      : ONI_extended
+datadir             : %(ensorootdir)s/ENSO_ONI
+datafile            : ensoyears.html
+datafile_backup     : el_nino_v3.dat
+netfile             : http://www.cpc.noaa.gov/products/analysis_monitoring/ensostuff/ensoyears.shtml
+netfile_backup      : ftp://eclipse.ncdc.noaa.gov/pub/ersstv3b/pdo/el_nino_situ_v3b.dat
+skipline            : 0
+reference_period    : 1971,2000
+thresholds          : (-0.5, 0.5)
+full_year           : False
+minimum_size        : 5
+reference_season    : 
+ensotag             : ONI
+#
+#[ENSO.BOM]
+#archive             : BOM
+#datadir             : %(ensorootdir)s/ENSO_SOI/BOM
+#datafile.darwin     : darwinmslp
+#datafile.tahiti     : tahitimslp
+#netfile.darwin      : ftp://ftp.bom.gov.au/anon/home/ncc/www/sco/soi/darwinmslp.html
+#netfile.tahiti      : ftp://ftp.bom.gov.au/anon/home/ncc/www/sco/soi/tahitimslp.html
+#scalefactor         : 1.
+#nodata              : -99.9
+#skipline.darwin     : 15
+#skipline.tahiti     : 16
+#reference_period    : 1933-01-01,1992-12-31
+#running_average     : 13
+##
+#[ENSO.CPC]
+#archive             : CPC
+#datadir             : %(ensorootdir)s/ENSO_SOI/CPC
+#datafile.darwin     : darwin.ascii
+#datafile.tahiti     : tahiti.ascii
+#netfile.darwin      : http://www.cgd.ucar.edu/cas/catalog/climind/darwin.ascii
+#netfile.tahiti      : http://www.cgd.ucar.edu/cas/catalog/climind/tahiti.ascii
+#scalefactor         : 1.
+#nodata              : -99.9
+#skipline.darwin     : 0
+#skipline.tahiti     : 
+#reference_period    : 1951-01-01, 1980-12-31
+#running_average     : 13
+

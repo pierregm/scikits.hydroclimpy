@@ -1,0 +1,277 @@
+ENSOPhaseComparisonPlot
+=============================================================
+
+.. currentmodule:: scikits.hydroclimpy.plotlib.ensotools
+
+[in module :mod:`scikits.hydroclimpy.plotlib.ensotools`]
+
+.. autoclass:: ENSOPhaseComparisonPlot
+
+   
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+      :nosignatures:
+   
+      ~ENSOPhaseComparisonPlot.__init__
+      ~ENSOPhaseComparisonPlot.acorr
+      ~ENSOPhaseComparisonPlot.add_artist
+      ~ENSOPhaseComparisonPlot.add_callback
+      ~ENSOPhaseComparisonPlot.add_collection
+      ~ENSOPhaseComparisonPlot.add_line
+      ~ENSOPhaseComparisonPlot.add_patch
+      ~ENSOPhaseComparisonPlot.add_table
+      ~ENSOPhaseComparisonPlot.annotate
+      ~ENSOPhaseComparisonPlot.apply_aspect
+      ~ENSOPhaseComparisonPlot.arrow
+      ~ENSOPhaseComparisonPlot.autoscale_view
+      ~ENSOPhaseComparisonPlot.axhline
+      ~ENSOPhaseComparisonPlot.axhspan
+      ~ENSOPhaseComparisonPlot.axis
+      ~ENSOPhaseComparisonPlot.axvline
+      ~ENSOPhaseComparisonPlot.axvspan
+      ~ENSOPhaseComparisonPlot.bar
+      ~ENSOPhaseComparisonPlot.barbs
+      ~ENSOPhaseComparisonPlot.barh
+      ~ENSOPhaseComparisonPlot.barplot
+      ~ENSOPhaseComparisonPlot.boxplot
+      ~ENSOPhaseComparisonPlot.broken_barh
+      ~ENSOPhaseComparisonPlot.can_zoom
+      ~ENSOPhaseComparisonPlot.change_geometry
+      ~ENSOPhaseComparisonPlot.cla
+      ~ENSOPhaseComparisonPlot.clabel
+      ~ENSOPhaseComparisonPlot.clear
+      ~ENSOPhaseComparisonPlot.cohere
+      ~ENSOPhaseComparisonPlot.connect
+      ~ENSOPhaseComparisonPlot.contains
+      ~ENSOPhaseComparisonPlot.contains_point
+      ~ENSOPhaseComparisonPlot.contour
+      ~ENSOPhaseComparisonPlot.contourf
+      ~ENSOPhaseComparisonPlot.convert_xunits
+      ~ENSOPhaseComparisonPlot.convert_yunits
+      ~ENSOPhaseComparisonPlot.csd
+      ~ENSOPhaseComparisonPlot.disconnect
+      ~ENSOPhaseComparisonPlot.drag_pan
+      ~ENSOPhaseComparisonPlot.draw
+      ~ENSOPhaseComparisonPlot.draw_artist
+      ~ENSOPhaseComparisonPlot.end_pan
+      ~ENSOPhaseComparisonPlot.errorbar
+      ~ENSOPhaseComparisonPlot.fill
+      ~ENSOPhaseComparisonPlot.fill_between
+      ~ENSOPhaseComparisonPlot.fill_betweenx
+      ~ENSOPhaseComparisonPlot.findobj
+      ~ENSOPhaseComparisonPlot.format_coord
+      ~ENSOPhaseComparisonPlot.format_xaxis
+      ~ENSOPhaseComparisonPlot.format_xdata
+      ~ENSOPhaseComparisonPlot.format_ydata
+      ~ENSOPhaseComparisonPlot.get_adjustable
+      ~ENSOPhaseComparisonPlot.get_agg_filter
+      ~ENSOPhaseComparisonPlot.get_alpha
+      ~ENSOPhaseComparisonPlot.get_anchor
+      ~ENSOPhaseComparisonPlot.get_animated
+      ~ENSOPhaseComparisonPlot.get_aspect
+      ~ENSOPhaseComparisonPlot.get_autoscale_on
+      ~ENSOPhaseComparisonPlot.get_autoscalex_on
+      ~ENSOPhaseComparisonPlot.get_autoscaley_on
+      ~ENSOPhaseComparisonPlot.get_axes
+      ~ENSOPhaseComparisonPlot.get_axes_locator
+      ~ENSOPhaseComparisonPlot.get_axis_bgcolor
+      ~ENSOPhaseComparisonPlot.get_axisbelow
+      ~ENSOPhaseComparisonPlot.get_child_artists
+      ~ENSOPhaseComparisonPlot.get_children
+      ~ENSOPhaseComparisonPlot.get_clip_box
+      ~ENSOPhaseComparisonPlot.get_clip_on
+      ~ENSOPhaseComparisonPlot.get_clip_path
+      ~ENSOPhaseComparisonPlot.get_contains
+      ~ENSOPhaseComparisonPlot.get_cursor_props
+      ~ENSOPhaseComparisonPlot.get_data_ratio
+      ~ENSOPhaseComparisonPlot.get_data_ratio_log
+      ~ENSOPhaseComparisonPlot.get_figure
+      ~ENSOPhaseComparisonPlot.get_frame
+      ~ENSOPhaseComparisonPlot.get_frame_on
+      ~ENSOPhaseComparisonPlot.get_geometry
+      ~ENSOPhaseComparisonPlot.get_gid
+      ~ENSOPhaseComparisonPlot.get_images
+      ~ENSOPhaseComparisonPlot.get_label
+      ~ENSOPhaseComparisonPlot.get_legend
+      ~ENSOPhaseComparisonPlot.get_legend_handles_labels
+      ~ENSOPhaseComparisonPlot.get_lines
+      ~ENSOPhaseComparisonPlot.get_navigate
+      ~ENSOPhaseComparisonPlot.get_navigate_mode
+      ~ENSOPhaseComparisonPlot.get_picker
+      ~ENSOPhaseComparisonPlot.get_position
+      ~ENSOPhaseComparisonPlot.get_rasterization_zorder
+      ~ENSOPhaseComparisonPlot.get_rasterized
+      ~ENSOPhaseComparisonPlot.get_renderer_cache
+      ~ENSOPhaseComparisonPlot.get_shared_x_axes
+      ~ENSOPhaseComparisonPlot.get_shared_y_axes
+      ~ENSOPhaseComparisonPlot.get_snap
+      ~ENSOPhaseComparisonPlot.get_tightbbox
+      ~ENSOPhaseComparisonPlot.get_title
+      ~ENSOPhaseComparisonPlot.get_transform
+      ~ENSOPhaseComparisonPlot.get_transformed_clip_path_and_affine
+      ~ENSOPhaseComparisonPlot.get_url
+      ~ENSOPhaseComparisonPlot.get_visible
+      ~ENSOPhaseComparisonPlot.get_window_extent
+      ~ENSOPhaseComparisonPlot.get_xaxis
+      ~ENSOPhaseComparisonPlot.get_xaxis_text1_transform
+      ~ENSOPhaseComparisonPlot.get_xaxis_text2_transform
+      ~ENSOPhaseComparisonPlot.get_xaxis_transform
+      ~ENSOPhaseComparisonPlot.get_xbound
+      ~ENSOPhaseComparisonPlot.get_xgridlines
+      ~ENSOPhaseComparisonPlot.get_xlabel
+      ~ENSOPhaseComparisonPlot.get_xlim
+      ~ENSOPhaseComparisonPlot.get_xmajorticklabels
+      ~ENSOPhaseComparisonPlot.get_xminorticklabels
+      ~ENSOPhaseComparisonPlot.get_xscale
+      ~ENSOPhaseComparisonPlot.get_xticklabels
+      ~ENSOPhaseComparisonPlot.get_xticklines
+      ~ENSOPhaseComparisonPlot.get_xticks
+      ~ENSOPhaseComparisonPlot.get_yaxis
+      ~ENSOPhaseComparisonPlot.get_yaxis_text1_transform
+      ~ENSOPhaseComparisonPlot.get_yaxis_text2_transform
+      ~ENSOPhaseComparisonPlot.get_yaxis_transform
+      ~ENSOPhaseComparisonPlot.get_ybound
+      ~ENSOPhaseComparisonPlot.get_ygridlines
+      ~ENSOPhaseComparisonPlot.get_ylabel
+      ~ENSOPhaseComparisonPlot.get_ylim
+      ~ENSOPhaseComparisonPlot.get_ymajorticklabels
+      ~ENSOPhaseComparisonPlot.get_yminorticklabels
+      ~ENSOPhaseComparisonPlot.get_yscale
+      ~ENSOPhaseComparisonPlot.get_yticklabels
+      ~ENSOPhaseComparisonPlot.get_yticklines
+      ~ENSOPhaseComparisonPlot.get_yticks
+      ~ENSOPhaseComparisonPlot.get_zorder
+      ~ENSOPhaseComparisonPlot.grid
+      ~ENSOPhaseComparisonPlot.has_data
+      ~ENSOPhaseComparisonPlot.have_units
+      ~ENSOPhaseComparisonPlot.hexbin
+      ~ENSOPhaseComparisonPlot.hist
+      ~ENSOPhaseComparisonPlot.hitlist
+      ~ENSOPhaseComparisonPlot.hlines
+      ~ENSOPhaseComparisonPlot.hold
+      ~ENSOPhaseComparisonPlot.imshow
+      ~ENSOPhaseComparisonPlot.in_axes
+      ~ENSOPhaseComparisonPlot.invert_xaxis
+      ~ENSOPhaseComparisonPlot.invert_yaxis
+      ~ENSOPhaseComparisonPlot.is_figure_set
+      ~ENSOPhaseComparisonPlot.is_first_col
+      ~ENSOPhaseComparisonPlot.is_first_row
+      ~ENSOPhaseComparisonPlot.is_last_col
+      ~ENSOPhaseComparisonPlot.is_last_row
+      ~ENSOPhaseComparisonPlot.is_transform_set
+      ~ENSOPhaseComparisonPlot.ishold
+      ~ENSOPhaseComparisonPlot.label_outer
+      ~ENSOPhaseComparisonPlot.legend
+      ~ENSOPhaseComparisonPlot.loglog
+      ~ENSOPhaseComparisonPlot.matshow
+      ~ENSOPhaseComparisonPlot.minorticks_off
+      ~ENSOPhaseComparisonPlot.minorticks_on
+      ~ENSOPhaseComparisonPlot.pchanged
+      ~ENSOPhaseComparisonPlot.pcolor
+      ~ENSOPhaseComparisonPlot.pcolorfast
+      ~ENSOPhaseComparisonPlot.pcolormesh
+      ~ENSOPhaseComparisonPlot.pick
+      ~ENSOPhaseComparisonPlot.pickable
+      ~ENSOPhaseComparisonPlot.pie
+      ~ENSOPhaseComparisonPlot.plot
+      ~ENSOPhaseComparisonPlot.plot_date
+      ~ENSOPhaseComparisonPlot.properties
+      ~ENSOPhaseComparisonPlot.psd
+      ~ENSOPhaseComparisonPlot.quiver
+      ~ENSOPhaseComparisonPlot.quiverkey
+      ~ENSOPhaseComparisonPlot.redraw_in_frame
+      ~ENSOPhaseComparisonPlot.relim
+      ~ENSOPhaseComparisonPlot.remove
+      ~ENSOPhaseComparisonPlot.remove_callback
+      ~ENSOPhaseComparisonPlot.reset_position
+      ~ENSOPhaseComparisonPlot.scatter
+      ~ENSOPhaseComparisonPlot.semilogx
+      ~ENSOPhaseComparisonPlot.semilogy
+      ~ENSOPhaseComparisonPlot.set
+      ~ENSOPhaseComparisonPlot.set_adjustable
+      ~ENSOPhaseComparisonPlot.set_agg_filter
+      ~ENSOPhaseComparisonPlot.set_alpha
+      ~ENSOPhaseComparisonPlot.set_anchor
+      ~ENSOPhaseComparisonPlot.set_animated
+      ~ENSOPhaseComparisonPlot.set_aspect
+      ~ENSOPhaseComparisonPlot.set_autoscale_on
+      ~ENSOPhaseComparisonPlot.set_autoscalex_on
+      ~ENSOPhaseComparisonPlot.set_autoscaley_on
+      ~ENSOPhaseComparisonPlot.set_axes
+      ~ENSOPhaseComparisonPlot.set_axes_locator
+      ~ENSOPhaseComparisonPlot.set_axis_bgcolor
+      ~ENSOPhaseComparisonPlot.set_axis_off
+      ~ENSOPhaseComparisonPlot.set_axis_on
+      ~ENSOPhaseComparisonPlot.set_axisbelow
+      ~ENSOPhaseComparisonPlot.set_clip_box
+      ~ENSOPhaseComparisonPlot.set_clip_on
+      ~ENSOPhaseComparisonPlot.set_clip_path
+      ~ENSOPhaseComparisonPlot.set_color_cycle
+      ~ENSOPhaseComparisonPlot.set_contains
+      ~ENSOPhaseComparisonPlot.set_cursor_props
+      ~ENSOPhaseComparisonPlot.set_figure
+      ~ENSOPhaseComparisonPlot.set_frame_on
+      ~ENSOPhaseComparisonPlot.set_gid
+      ~ENSOPhaseComparisonPlot.set_label
+      ~ENSOPhaseComparisonPlot.set_lod
+      ~ENSOPhaseComparisonPlot.set_navigate
+      ~ENSOPhaseComparisonPlot.set_navigate_mode
+      ~ENSOPhaseComparisonPlot.set_picker
+      ~ENSOPhaseComparisonPlot.set_position
+      ~ENSOPhaseComparisonPlot.set_rasterization_zorder
+      ~ENSOPhaseComparisonPlot.set_rasterized
+      ~ENSOPhaseComparisonPlot.set_snap
+      ~ENSOPhaseComparisonPlot.set_title
+      ~ENSOPhaseComparisonPlot.set_transform
+      ~ENSOPhaseComparisonPlot.set_url
+      ~ENSOPhaseComparisonPlot.set_visible
+      ~ENSOPhaseComparisonPlot.set_xbound
+      ~ENSOPhaseComparisonPlot.set_xlabel
+      ~ENSOPhaseComparisonPlot.set_xlim
+      ~ENSOPhaseComparisonPlot.set_xscale
+      ~ENSOPhaseComparisonPlot.set_xticklabels
+      ~ENSOPhaseComparisonPlot.set_xticks
+      ~ENSOPhaseComparisonPlot.set_ybound
+      ~ENSOPhaseComparisonPlot.set_ylabel
+      ~ENSOPhaseComparisonPlot.set_ylim
+      ~ENSOPhaseComparisonPlot.set_yscale
+      ~ENSOPhaseComparisonPlot.set_yticklabels
+      ~ENSOPhaseComparisonPlot.set_yticks
+      ~ENSOPhaseComparisonPlot.set_zorder
+      ~ENSOPhaseComparisonPlot.specgram
+      ~ENSOPhaseComparisonPlot.spy
+      ~ENSOPhaseComparisonPlot.start_pan
+      ~ENSOPhaseComparisonPlot.stem
+      ~ENSOPhaseComparisonPlot.step
+      ~ENSOPhaseComparisonPlot.table
+      ~ENSOPhaseComparisonPlot.text
+      ~ENSOPhaseComparisonPlot.ticklabel_format
+      ~ENSOPhaseComparisonPlot.twinx
+      ~ENSOPhaseComparisonPlot.twiny
+      ~ENSOPhaseComparisonPlot.update
+      ~ENSOPhaseComparisonPlot.update_datalim
+      ~ENSOPhaseComparisonPlot.update_datalim_bounds
+      ~ENSOPhaseComparisonPlot.update_datalim_numerix
+      ~ENSOPhaseComparisonPlot.update_from
+      ~ENSOPhaseComparisonPlot.update_params
+      ~ENSOPhaseComparisonPlot.vlines
+      ~ENSOPhaseComparisonPlot.whiskerplot
+      ~ENSOPhaseComparisonPlot.xaxis_date
+      ~ENSOPhaseComparisonPlot.xaxis_inverted
+      ~ENSOPhaseComparisonPlot.xcorr
+      ~ENSOPhaseComparisonPlot.yaxis_date
+      ~ENSOPhaseComparisonPlot.yaxis_inverted
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~ENSOPhaseComparisonPlot.frame
+   
+   

@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% set title = 'scikits.hydroclimpy: python tools for climate analysis' %}
+
+
+{% block body %}
+  <h1>Overview</h1>
+
+  <p>
+  The <tt>scikits.hydroclimpy</tt> package is a loose collection of utilities
+  to manipulate hydro-climatologic data, such as series of temperatures,
+  precipitation, streamflow, evapotranspiration...
+  Climate information can easily be associated to a series to take the impact
+  of climate variability into account.
+  </p>
+
+  <p>
+  This package was originally designed as a series of extensions to 
+  <a href="http://www.scipy.org">NumPy</a>.
+  With time, part of the code was incorporated in 
+  <a href="http://www.scipy.org">NumPy</a> as the 
+  <a href="http://docs.scipy.org/doc/numpy/reference/maskedarray.html">numpy.ma</a> 
+  module to handle missing data, 
+  and in the 
+  <a href="http://pytseries.sourceforge.net">scikits.timeseries</a> scikit.
+  </p>
+
+
+  <p>The <a href="."><tt>scikits.hydroclimpy</tt></a> module provides 
+  classes and functions for  manipulating, reporting, and plotting 
+  climate time series of various frequencies (daily, monthly, seasonal...).
+  The focus is on convenient data access and manipulation while leveraging
+  the existing mathematical functionality in numpy and scipy.</p>
+
+
+  <h2>Documentation</h2>
+  <table class="contentstable" align="center" style="margin-left: 30px"><tr>
+    <td width="33%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("contents") }}">Contents</a><br/>
+         <span class="linkdescr">for a complete overview</span></p>
+    </td><td width="34%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("search") }}">Search page</a><br/>
+         <span class="linkdescr">search the documentation</span></p>
+    </td><td width="34%">
+      <p class="biglink"><a class="biglink" href="{{ pathto("genindex") }}">General Index</a><br/>
+         <span class="linkdescr">all functions, classes, terms</span></p>
+    </td></tr>
+  </table>
+
+
+  <h2>Get scikits.hydroclimpy</h2>
+  <p>
+  The code can be found in a subversion repository, at
+  <tt>http://svn.scipy.org/svn/scikits/trunk/hydroclimpy</tt>.
+  </p>
+  <p>
+  Please refer to the <a href="{{ pathto('installation') }}">installation</a> 
+  page for more information about requirements.
+  </p>
+  
+
+{% endblock %}

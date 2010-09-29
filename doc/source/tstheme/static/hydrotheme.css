@@ -1,0 +1,187 @@
+@import "sphinxdoc.css";
+/*@import "basic.css";*/
+
+/* ------------------------------------------------------------------------ */
+/* @group Colors */
+
+/* @group Related bar */
+div.related {
+    background-color: #99cccc;
+    background-color: #ccffff;
+}
+div.related ul li a {
+    color: #00abaa;
+}
+
+/* @end */
+
+/* @group Headers */
+div.body h1 {
+    background-color: #009999;
+    color: #f0fff0;
+}
+div.body h1 a tt{
+    color: #ccccff;
+}
+div.body h1 a tt:hover{
+    color: #cc66cc;
+}
+
+div.body h2 {
+    background-color: #669999;
+    color: #f0fff0;
+}
+div.body h2 a tt{
+    color: #afeeee;
+}
+
+div.body h3 {
+    background-color: #99cccc;
+    color: #333366;
+}
+
+div.body h4 {
+    background-color: #ccffff;
+    color: #333366;
+}
+
+div.body a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* @end */
+
+/* @group Sphinx Sidebar */
+
+div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    background-color: #99cccc;
+}
+
+/* @end */
+
+body {
+    background-color: #99cccc;  
+}
+
+a {
+    color: #009999;
+    text-decoration: None;
+}
+a:hover {
+    color: #6666cc;
+}
+a tt {
+    background-color: transparent;
+    font-weight: bold;
+    border: 0;
+    color: #339999;
+}
+a tt:hover {
+    color: #cc99ff;
+}
+
+
+
+/* @end */
+
+/* ------------------------------------------------------------------------ */
+
+/* @group Margins & positions */
+
+/* @group Body */
+body {
+    margin: 0px 20px 0px 40px;
+}
+div.bodywrapper {
+    margin: 0 0 0 240px;
+    border-right: 1px solid #ccc;
+}
+
+/* @end */
+
+/* @group Sidebar */
+/*div.sphinxsidebarwrapper {
+    padding: 10px 5px 0 10px;
+}*/
+
+
+div.sphinxsidebar {
+    float: left;
+/*    margin-right: +100%;*/
+/*    margin-right: -100%;*/
+    padding: 0 15px 15px 0.5em;
+    width: 210px;
+    font-size: 1em;
+    text-align: left;
+}
+/*div.sphinxsidebar h3, div.sphinxsidebar h4 {
+    margin: 1em 0 0.5em 0;
+    padding: 0.1em 0.5em 0.1em 0;
+}*/
+/*div.sphinxsidebar ul {
+    padding-left: 0;
+    padding-right: 1.5em;
+    margin-top: 7px;
+    padding: 0;
+    line-height: 130%;
+}*/
+
+/*div.sphinxsidebar ul ul {
+    margin-left: 0;
+    margin-right: 20px;
+}*/
+
+h1 {
+    padding: 0.7em 0 0.3em 0.3em;
+    border-style: outset;
+    border-width: 2px;
+}
+h2 {
+    padding: 0.3em 0 0.2em 0.3em;
+}
+div.body h3 {
+    padding: 0.3em 0 0.2em 0.3em;
+}
+
+/* @end */
+
+table td, table th {
+    padding: 0.5em 0.5em 0.2em 1.5em;
+}
+table.docutils td, table.docutils th {
+    padding: 0.2em 0.5em 0.2em 1.5em;
+}
+
+
+/* @end */
+
+/* ------------------------------------------------------------------------ */
+
+/* @group Other templates */
+
+/* @group Field list */
+table.field-list th {
+  border-left: 1px solid #aaa !important;
+  padding-left: 5px;
+  color: #333366;
+  background-color: #99cccc;
+}
+table.field-list { 
+  border-collapse: separate;
+  border-spacing: 10px;
+}
+td.field-body > blockquote {
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+}
+/* @end */
+
+
+
+dl.method{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #99cccc;
+}
+/* @end */
